@@ -1,13 +1,17 @@
 # Your TextAnalyzer model code will go here.
 
-class TextAnalyzer 
-  attr_reader :text 
+class TextAnalyzer
+  attr_reader :text
 
-  def inititalize(text) 
-    @text = text.downcase 
-  end 
+  def inititalize(text)
+    @text = text.downcase
+  end
 
-  def count_of_words 
+  def count_of_words
     words = text.split(" ")
-    words.count 
+    words.count
+  end
+
+  def count_of_vowels 
+    text.scan(/[aeiou]/).count 
   end
